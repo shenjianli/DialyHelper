@@ -37,14 +37,14 @@ def notify_getup():
 def notify_sign():
     print("骚年，上班啦，记得签到啊！")
     signin_list = RemindDB.query_signin_remind()
-    notify_wechat(Config.we_chat_hint + "骚年，上班啦，记得签到,打卡啊！",signin_list)
+    notify_wechat(Config.we_chat_hint + "不敬业要失业！不爱岗要下岗！骚年，上班啦 ----- 签到,打卡",signin_list)
     notifyMyself('骚年，上班啦，记得签到啊！')
 
 # 午饭
 def notify_lunch():
     print("人是铁饭是钢，午饭，走起！")
     lunch_list = RemindDB.query_lunch_remind()
-    notify_wechat(Config.we_chat_hint + "人是铁饭是钢，午饭，走起！", lunch_list)
+    notify_wechat(Config.we_chat_hint + "人是铁饭是钢 ----- 午饭", lunch_list)
     notifyMyself('人是铁饭是钢，午饭，走起！')
 
 
@@ -52,7 +52,7 @@ def notify_lunch():
 def notify_offwork():
     print("一天最美的事，莫过于下班，下班，走起！")
     offwork_list = RemindDB.query_offwork_remind()
-    notify_wechat(Config.we_chat_hint + "一天最美的事，莫过于下班，打卡，签退，走起！", offwork_list)
+    notify_wechat(Config.we_chat_hint + "一天最美的事，莫过 ----- 打卡，签退，下班", offwork_list)
     notifyMyself('一天最美的事，莫过于下班，打卡，签退，走起！')
 
 
@@ -60,14 +60,14 @@ def notify_offwork():
 def notify_signout():
     print("枯藤老树昏鸦，上班下班回家")
     signout_list = RemindDB.query_signout_remind()
-    notify_wechat(Config.we_chat_hint + "一天最美的事，莫过于下班，但不要忘了签退", signout_list)
+    notify_wechat(Config.we_chat_hint + "一天最美的事，莫过 ----- 打卡，签退，下班", signout_list)
     notifyMyself('一天最美的事，莫过于下班，打卡，签退，走起！')
 
 # 加班
 def notify_extrawork():
     print("加班写代码中")
     overtime_list = RemindDB.query_overtime_remind()
-    notify_wechat(Config.we_chat_hint + "加吧正常，经常加班就不好了，打卡，签退，回吧！", overtime_list)
+    notify_wechat(Config.we_chat_hint + "加班真是炫，好处看得见 ----- 打卡，签退", overtime_list)
     notifyMyself('一天最美的事，莫过于下班，打卡，签退，走起！')
 
 
@@ -75,7 +75,7 @@ def notify_extrawork():
 def notify_sleep():
     print("垂死病中惊坐起，今日到底星期几。抬望眼，卧槽，周一。低头，完了，十点。")
     sleep_list = RemindDB.query_sleep_remind()
-    notify_wechat('早睡早起，身体好，睡觉哇！', sleep_list)
+    notify_wechat('早睡早起，身体好，为了明天，睡觉啦！', sleep_list)
 
 
 # 向微信发送消息
