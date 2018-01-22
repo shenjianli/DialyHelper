@@ -30,7 +30,7 @@ mysql_pass = 'cqtddt@2016'
 mysql_db = 'dialy'
 
 # 系统客户微信账号
-admin = ['JerryShen']
+admin = ['Jerry']
 
-# 微信提示语
+# 微信提示语8
 we_chat_hint = '【笨鸟小助手】'

@@ -375,10 +375,10 @@ if __name__ == '__main__':
 
     print("Database mysql : %s " % version)
 
-    # create_remind_table()
+    create_remind_table()
     #
-    # insert_my_remind_data('JerryShen')
-    # insert_remind_data('JerryShen','JerryShen',"JerryShen")
+    insert_my_remind_data('JerryShen')
+    # insert_remind_data('JerryShen', 'JerryShen', "JerryShen")
 
     # result = query_all_remind()
     # for data in result:

@@ -101,6 +101,7 @@ def notifyMyself(msg):
 def notify_admin():
     notify_wechat(Config.we_chat_hint + "系统运行正常，请主人放心", Config.admin)
 
+
 def send_msg_to_admin(msg):
     notify_wechat(msg, Config.admin)
 
@@ -140,7 +141,7 @@ class dialy_remind_thread (threading.Thread):
                 time.sleep(60 * 20)
 
             # 进行提示
-            if Config.getup_hour == s_hour and Config.getup_min == s_min:
+            elif Config.getup_hour == s_hour and Config.getup_min == s_min:
                 notify_getup()
             elif Config.sign_hour == s_hour and Config.sign_min == s_min:
                 notify_sign()
@@ -157,7 +158,7 @@ class dialy_remind_thread (threading.Thread):
             if s_hour < (Config.getup_hour - 1) or s_hour > (Config.sleep_hour + 1):
                 time.sleep(60 * 20)
             else:
-                time.sleep(60)
+                time.sleep(20)
 
 
 if __name__ == '__main__':
